@@ -1,0 +1,30 @@
+<h3 style="margin-bottom:1em;">
+    <a style="margin-right:2em;"class="btn btn-secondary" href="/">
+        <i class="fa fa-plus"></i>
+        Create New
+    </a> 
+    Registered Users
+</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Mobile</th>
+            <th>City</th>
+            <th>Image</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.fullName}}</td>
+            <td>{{this.email}}</td>
+            <td>{{this.mobile}}</td>
+            <td>{{this.city}}</td>
+            <td><img class="img-fluid img-thumbnail" src="/uploads/{{this.fullName}}.jpg"/></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
