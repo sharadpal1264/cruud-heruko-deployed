@@ -65,7 +65,7 @@ function insertRecord(req, res) {
 function updateRecord(req, res) {
     uploadFile(req,res);
     Employee.findOneAndUpdate({ _id: req.body._id }, req.body, { new: true }, (err, doc) => {
-        if (!err) { res.redirect('employee/list'); }
+        if (!err) { res.redirect('/list'); }
         else {
             if (err.name == 'ValidationError') {
                 handleValidationError(err, req.body);
